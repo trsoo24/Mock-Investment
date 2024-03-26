@@ -7,7 +7,6 @@ import com.google.gson.JsonParser;
 import com.project.market.entity.Market;
 import com.project.market.entity.Ticker;
 import com.project.market.entity.type.Change;
-import com.project.market.repository.MarketRepository;
 import com.project.reference.CheckMarketReference;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -27,7 +26,6 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class TickerService {
-    private final MarketRepository marketRepository;
     private final CheckMarketReference checkMarketReference;
     private static final String tickerUrl = "https://api.upbit.com/v1/ticker?markets=";
     /** MarketName ex) "KRW-BTC" 으로 검색하는 방법 우선 사용
